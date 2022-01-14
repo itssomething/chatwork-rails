@@ -8,9 +8,9 @@ namespace :tet do
     destination_room_id = 116821963
     # group: 116821963
     # personal: 137385942
-    days = ("2022/01/01".to_date - Date.today).to_i
+    days = ("2022/01/29".to_date - Date.today).to_i
     body = "[toall]
-Còn #{days} ngày nữa là nghỉ tết dương (rachoa)"
+Còn #{days} ngày nữa là nghỉ tết âm (rachoa)"
 
     # change token to bot's token
     ChatWork.api_key = ENV["BOT_ACCOUNT_TOKEN"]
