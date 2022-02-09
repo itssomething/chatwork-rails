@@ -9,8 +9,11 @@ namespace :tet do
     # group: 116821963
     # personal: 137385942
     days = ("2022/05/01".to_date - Date.today).to_i
+    wedding = ("2022/03/05".to_date - Date.today).to_i
     body = "[toall]
-Còn #{days} ngày nữa là nghỉ quốc tế lao động (rachoa)"
+Còn #{days} ngày nữa là nghỉ quốc tế lao động (rachoa)
+Còn #{wedding} ngày nữa là đến đám cưới anh Hưng nha cã nhà =)) 
+"
 
     # change token to bot's token
     ChatWork.api_key = ENV["BOT_ACCOUNT_TOKEN"]
