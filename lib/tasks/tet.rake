@@ -12,7 +12,7 @@ namespace :tet do
     wedding = ("2022/03/05".to_date - Date.today).to_i
     body = "[toall]
 Còn #{days} ngày nữa là nghỉ quốc tế lao động (rachoa)
-Còn #{wedding} ngày nữa là đến đám cưới anh Hưng nha cã nhà =)) 
+Đám cưới anh Hưng vào 17h30 chiều ngày 5/3/2022 nhé cã nhà, còn #{wedding} ngày nữa =))
 "
 
     # change token to bot's token
