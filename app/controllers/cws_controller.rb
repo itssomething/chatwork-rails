@@ -13,7 +13,9 @@ class CwsController < ApplicationController
     # get room id and body of the message
     room_id = params[:webhook_event][:room_id]
     body = params[:webhook_event][:body]
-
+     
+    return if room_id == 116821963
+    
     # find room
     c = ChatWork::Room.find room_id: room_id
     room_name = c.name
