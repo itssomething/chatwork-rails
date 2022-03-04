@@ -27,9 +27,9 @@ class CwsController < ApplicationController
           'Content-type': "application/json;charset=utf-8"
         },
         body: {
-          channel: "#general",
+          "channel": "#general",
           "text": "<!channel> #{body}"
-        }
+        }.to_json
       )
       
       render status: 200
