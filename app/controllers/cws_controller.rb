@@ -16,9 +16,13 @@ class CwsController < ApplicationController
     
     # case room is Nghiệp Inc chat room, we send message to slacks
     if room_id == 116821963
-      body = "New message in Nghiệp Inc chat: \n
-      #{body}"
-      
+      if body.include?("[toall]")
+        slack_body = "<!channel> *New message in Nghiệp Inc chat:* \n
+        #{body}"
+      else 
+        slack_body = "New message in Nghiệp Inc chat: \n
+        #{body}"
+      end
       url = "https://slack.com/api/chat.postMessage"
       
       HTTParty.post(url,
@@ -28,7 +32,7 @@ class CwsController < ApplicationController
         },
         body: {
           "channel": "#general",
-          "text": "<!channel> #{body}"
+          "text": "#{slack_body}"
         }.to_json
       )
       
