@@ -1,5 +1,3 @@
-require 'net/http'
-
 class CwsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
@@ -31,6 +29,18 @@ class CwsController < ApplicationController
       res = Net::HTTP.start(uri.hostname, uri.port) do |http|
         http.request(req)
       end
+      
+      url = "https://slack.com/api/chat.postMessage"
+      
+      HTTParty.post(url,
+        headers: {
+          Authorization: ENV["SLACK_BOT_TOKEN"],
+          'Content-type': "application/json;charset=utf-8"
+        },
+        body: {
+          channel: "#general",
+          "text": "<!channel> #{body}"
+        }
       
       render status: 200
     else 
