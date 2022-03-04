@@ -26,7 +26,7 @@ class CwsController < ApplicationController
       
       req['Content-type'] = "application/json;charset=utf-8"
       req['Authorization'] = ENV["SLACK_BOT_TOKEN"]
-      req.set_form_data({"channel": "#general", "text":"<!channel> #{body}"})
+      req.set_form_data({"channel": "#general", "text": "<!channel> #{body}"})
       
       res = Net::HTTP.start(uri.hostname, uri.port) do |http|
         http.request(req)
