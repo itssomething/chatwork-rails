@@ -24,7 +24,7 @@ class CwsController < ApplicationController
       uri = URI('https://slack.com/api/chat.postMessage')
       req = Net::HTTP::Post.new(uri)
       
-      req['Content-type'] = application/json;charset=utf-8
+      req['Content-type'] = "application/json;charset=utf-8"
       req['Authorization'] = ENV["SLACK_BOT_TOKEN"]
       req.set_form_data({"channel": "#general", "text":"<!channel> #{body}"})
       
