@@ -14,7 +14,7 @@ class CwsController < ApplicationController
     room_id = params[:webhook_event][:room_id]
     body = params[:webhook_event][:body]
     
-    # case room is Nghiệp Inc chat room, we send message to slack
+    # case room is Nghiệp Inc chat room, we send message to slacks
     if room_id == 116821963
       body = "New message in Nghiệp Inc chat: \n
       #{body}"
