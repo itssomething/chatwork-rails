@@ -1,3 +1,5 @@
+require 'net/http'
+
 class CwsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
