@@ -30,6 +30,7 @@ class CwsController < ApplicationController
           channel: "#general",
           "text": "<!channel> #{body}"
         }
+      )
       
       render status: 200
     else 
