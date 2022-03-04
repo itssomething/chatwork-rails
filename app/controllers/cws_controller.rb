@@ -19,6 +19,17 @@ class CwsController < ApplicationController
       body = "New message in Nghiệp Inc chat: \n
       #{body}"
       
+      uri = URI('https://slack.com/api/chat.postMessage')
+      req = Net::HTTP::Post.new(uri)
+      
+      req['Content-type'] = application/json;charset=utf-8
+      req['Authorization'] = ENV["SLACK_BOT_TOKEN"]
+      req.set_form_data({"channel": "#general", "text":"<!channel> #{body}"})
+      
+      res = Net::HTTP.start(uri.hostname, uri.port) do |http|
+        http.request(req)
+      end
+      
       render status: 200
     else 
       # find room
