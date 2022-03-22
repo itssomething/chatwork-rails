@@ -12,7 +12,6 @@ namespace :tet do
     wedding = ("2022/03/05".to_date - Date.today).to_i
     body = "[toall]
 Còn #{days} ngày nữa là nghỉ quốc tế lao động (rachoa)
-Đám cưới anh Hưng bị hủy r, thiệt sầu =))
 "
 
     # change token to bot's token
