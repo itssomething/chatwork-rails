@@ -9,9 +9,7 @@ namespace :tet do
     # group: 116821963
     # personal: 137385942
     days = ("2022/05/01".to_date - Date.today).to_i
-    hungking = ("2022/04/10".to_date - Date.today).to_i
     body = "[toall]
-Còn #{hungking} ngày nữa là nghỉ giỗ tổ Hùng Vương (rachoa)
 Còn #{days} ngày nữa là nghỉ quốc tế lao động (rachoa)
 "
 
