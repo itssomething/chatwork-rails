@@ -8,9 +8,9 @@ namespace :tet do
     destination_room_id = 116821963
     # group: 116821963
     # personal: 137385942
-    days = ("2022/05/01".to_date - Date.today).to_i
+    days = ("2022/09/02".to_date - Date.today).to_i
     body = "[toall]
-Còn #{days} ngày nữa là nghỉ quốc tế lao động (rachoa)
+Còn #{days} ngày nữa là nghỉ quốc khánh (rachoa)
 "
 
     # change token to bot's token
