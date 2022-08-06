@@ -6,7 +6,7 @@ ruby '3.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "chatwork"
 gem "httparty"
-gem 'rails', '~> 5.2.1', '>= 5.2.1.1'
+gem 'rails', '~> 6.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # Use Puma as the app server
